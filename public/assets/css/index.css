@@ -13,48 +13,40 @@ body {
     color: #fff;
 }
 
-.mode-toggle {
+.mode-slider {
     display: flex;
     align-items: center;
     margin: 20px 0;
 }
 
-.mode-toggle label {
-    margin-right: 10px;
+.mode-slider input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100px;
+    height: 20px;
+    background: linear-gradient(to right, #fff 0%, #000 100%);
+    outline: none;
+    border-radius: 20px;
+    transition: background 0.4s;
 }
 
-.mode-toggle input[type="checkbox"] {
-    display: none;
-}
-
-.mode-toggle .slider {
-    position: relative;
-    width: 50px;
-    height: 25px;
-    background-color: #ccc;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
-}
-
-.mode-toggle input[type="checkbox"]:checked + .slider {
-    background-color: #2196F3; /* Change the background color when checked */
-}
-
-.mode-toggle .slider::before {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background-color: white;
+.mode-slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    left: 0;
-    transition: transform 0.3s ease;
+    background: #fff;
+    cursor: pointer;
 }
 
-.mode-toggle input[type="checkbox"]:checked + .slider::before {
-    transform: translateX(25px); /* Move the slider button to the right when checked */
+.mode-slider input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
 }
-
 
 .game-selector {
     display: flex;

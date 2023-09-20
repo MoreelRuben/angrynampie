@@ -26,11 +26,10 @@
     <link rel="stylesheet" href="assets/css/index.css">
   </head>
   <body>
-    <div class="mode-toggle">
-      <label for="toggle-switch">Toggle:</label>
-      <input type="checkbox" id="toggle-switch">
-      <span class="slider"></span>
+    <div class="mode-slider">
+      <input type="range" id="slider" min="0" max="1" step="1" value="0">
   </div>
+  
 
   <div class="game-selector">
       <div class="game-mode">
@@ -51,12 +50,18 @@
   </div>
 
   <script>
-    const toggleSwitch = document.getElementById("toggle-switch");
+    const slider = document.getElementById("slider");
     const body = document.body;
 
-    toggleSwitch.addEventListener("change", function () {
-        body.classList.toggle("dark-mode");
+    slider.addEventListener("input", function () {
+        const sliderValue = slider.value;
+        if (sliderValue === "0") {
+            body.classList.remove("dark-mode");
+        } else {
+            body.classList.add("dark-mode");
+        }
     });
 </script>
+
 
 </html>

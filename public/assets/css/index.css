@@ -14,14 +14,47 @@ body {
 }
 
 .mode-toggle {
-    text-align: center;
+    display: flex;
+    align-items: center;
     margin: 20px 0;
 }
 
 .mode-toggle label {
-    margin: 0 10px;
-    cursor: pointer;
+    margin-right: 10px;
 }
+
+.mode-toggle input[type="checkbox"] {
+    display: none;
+}
+
+.mode-toggle .slider {
+    position: relative;
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.mode-toggle input[type="checkbox"]:checked + .slider {
+    background-color: #2196F3; /* Change the background color when checked */
+}
+
+.mode-toggle .slider::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+
+.mode-toggle input[type="checkbox"]:checked + .slider::before {
+    transform: translateX(25px); /* Move the slider button to the right when checked */
+}
+
 
 .game-selector {
     display: flex;

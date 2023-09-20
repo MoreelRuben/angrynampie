@@ -51,11 +51,12 @@
   </div>
 
   <script>
-      const modeSwitch = document.getElementById("mode-switch");
-      const body = document.body;
+    const toggleSwitch = document.getElementById("toggle-switch");
+    const body = document.body;
 
-      modeSwitch.addEventListener("change", function () {
-          body.classList.toggle("dark-mode");
-      });
-  </script>
+    toggleSwitch.addEventListener("change", function () {
+        body.classList.toggle("dark-mode");
+    });
+</script>
+
 </html>

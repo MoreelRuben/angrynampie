@@ -22,8 +22,40 @@
       to avoid connecting the SDK to running emulators.
     -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <link rel="stylesheet" href="assets/css/index.css">
   </head>
   <body>
-      <h2>Coming soon</h2>
-      <p>fuck iedereen die me log heeft verbrand</p>
+    <div class="mode-toggle">
+      <label for="mode-switch">Light Mode</label>
+      <input type="checkbox" id="mode-switch">
+      <label for="mode-switch">Dark Mode</label>
+  </div>
+
+  <div class="game-selector">
+      <div class="game-mode">
+          <img src="game1.jpg" alt="Game 1">
+          <h2>Game 1</h2>
+          <p>Description for Game 1.</p>
+      </div>
+      <div class="game-mode">
+          <img src="game2.jpg" alt="Game 2">
+          <h2>Game 2</h2>
+          <p>Description for Game 2.</p>
+      </div>
+      <div class="game-mode">
+          <img src="game3.jpg" alt="Game 3">
+          <h2>Game 3</h2>
+          <p>Description for Game 3.</p>
+      </div>
+  </div>
+
+  <script>
+      const modeSwitch = document.getElementById("mode-switch");
+      const body = document.body;
+
+      modeSwitch.addEventListener("change", function () {
+          body.classList.toggle("dark-mode");
+      });
+  </script>
 </html>

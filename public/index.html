@@ -22,6 +22,7 @@
       to avoid connecting the SDK to running emulators.
     -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script src="assets/js/index.js"></script>
 
     <link rel="stylesheet" href="assets/css/index.css">
   </head>
@@ -49,19 +50,7 @@
       </div>
   </div>
 
-  <script>
-    const slider = document.getElementById("slider");
-    const body = document.body;
-
-    slider.addEventListener("input", function () {
-        const sliderValue = slider.value;
-        if (sliderValue === "0") {
-            body.classList.remove("dark-mode");
-        } else {
-            body.classList.add("dark-mode");
-        }
-    });
-</script>
+  
 
 
 </html>

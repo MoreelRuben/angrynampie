@@ -16,11 +16,8 @@ function init(){
 
     const modes = document.querySelectorAll('.game-mode');
 
-    modes.forEach(el => el.addEventListener("click", setupGame))
-}
-
-function setupGame(e){
-    e.preventDefault;
-    let id = e.target.id
-    window.location.href = "https://angrynampie.tk/game?type=" + id;
+    modes.forEach(el => el.addEventListener("click", function(event){
+        const parentId = el.id;
+        window.location.href = "https://angrynampie.tk/game?type=" + parentId;
+    }))
 }

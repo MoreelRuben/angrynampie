@@ -48,14 +48,26 @@ body {
     cursor: pointer;
 }
 
-.game-selector {
+.game-selector, .dark-game-selector {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+
 .game-mode {
     background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    max-width: 300px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+.dark-game-mode {
+    background-color: darkslategrey;
+    color: azure;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 20px;

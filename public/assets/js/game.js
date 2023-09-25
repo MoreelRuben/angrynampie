@@ -3,9 +3,13 @@ window.addEventListener('DOMContentLoaded', init)
 
 function init(){
     let counter = 25;
+    const typeParam = getParamByName("type")
     let tiles = document.querySelectorAll('.game-tile');
-
-    tiles.forEach(el => el.addEventListener("click", clickTile))
+    tiles.forEach(el => {
+        el.firstChild.src = typeParam + ".png";
+        el.addEventListener("click", clickTile);
+    }
+    )
 }
 
 function clickTile(e){
@@ -32,4 +36,9 @@ function toGameSelector(e){
     e.preventDefault;
     window.location.href = "index.html";
 
+}
+
+function getParamByName(name){
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name)
 }

@@ -22,4 +22,5 @@ function init(){
 function setupGame(e){
     e.preventDefault;
     let id = e.id
+    window.location.href = "https://angrynampie.tk?type=" + id;
 }

@@ -23,7 +23,7 @@ function clickTile(e){
 
 function endGame(){
     window.addEventListener("click", toGameSelector);
-    document.querySelector("#endscreen").computedStyleMap.display  = "block";
+    document.querySelector("#endscreen").style.display  = "block";
 
 }
 

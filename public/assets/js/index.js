@@ -13,4 +13,13 @@ function init(){
             body.classList.add("dark-mode");
         }
     });
+
+    const modes = document.querySelectorAll('.game-mode');
+
+    modes.forEach(el => el.addEventListener("click", setupGame))
+}
+
+function setupGame(e){
+    e.preventDefault;
+    let id = e.id
 }

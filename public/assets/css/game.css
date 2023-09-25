@@ -30,6 +30,10 @@ h1 {
     overflow: hidden;
 }
 
+.used {
+    background-color: darkslategrey;
+}
+
 .game-tile img {
     width: 100%;
     height: 100%;

@@ -1,4 +1,7 @@
+window.addEventListener('DOMContentLoaded', init)
 
+
+function init(){
     const slider = document.getElementById("slider");
     const body = document.body;
 
@@ -10,3 +13,4 @@
             body.classList.add("dark-mode");
         }
     });
+}

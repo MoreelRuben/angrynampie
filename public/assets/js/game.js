@@ -14,7 +14,7 @@ function init(){
 
 function clickTile(e){
     e.preventDefault;
-    let id = e.id
+    let id = e.target.id
     let tile = document.querySelector('#' + id);
     tile.removeEventListener;
     tile.classList.add("used")
